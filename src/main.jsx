@@ -8,7 +8,7 @@ import Home from "./pages/Home.jsx";
 import Shop from "./pages/Shop.jsx";
 import { Provider } from "react-redux";
 import store from "./redux/Store.jsx";
-import Cart from "./pages/cart.jsx";
+import Cart from "./pages/Cart.jsx";
 import CheckOut from "./pages/CheckOut.jsx";
 import OrderConfirmpage from "./pages/OrderConfirmpage.jsx";
 import RegisterPage from "./pages/RegisterPage.jsx";

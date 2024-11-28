@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 import { HiQuestionMarkCircle } from "react-icons/hi";
 
 // eslint-disable-next-line react/prop-types
-function Products({ titlePage }) {
+function Products({ titlePage, minProdc, maxProdc }) {
   const [addToCart, setAddToCart] = useState([]);
   const dispatch = useDispatch();
   const { products, loading, error } = useSelector((state) => state.products);
@@ -94,7 +94,7 @@ function Products({ titlePage }) {
         ) : error ? (
           error.message
         ) : (
-          products.map((product) => (
+          products.slice(minProdc, maxProdc).map((product) => (
             <div
               key={product.id}
               className="w-full h-fit relative shadow-lg rounded-lg p-3 duration-300 hover:scale-110"
